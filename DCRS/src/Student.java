@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class Student extends User{
+public class Student extends User implements Serializable {
 
     HashMap<Character, ArrayList<Course> >courses;
     final int max_electives = 2;
@@ -16,6 +17,9 @@ public class Student extends User{
         courses.put('S',temp);
         courses.put('F',temp);
         courses.put('W',temp);
+    }
+    public boolean isStudent(){
+        return true;
     }
 
     void addCourse(Character semester, Course course){

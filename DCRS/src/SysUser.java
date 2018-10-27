@@ -1,5 +1,7 @@
 public abstract class SysUser{
-    User user;
+    String Identifier;
+    User currUser;
+    RMIDepartment deptInUse;
 
-
+    public abstract void startProcess(String id);
 }
